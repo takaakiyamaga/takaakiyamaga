@@ -1,3 +1,14 @@
+
+<?php
+try {
+$pdo = new PDO('mysql:host=localhost;dbname=g031o153;charset=utf8','test1','a04073486',
+array(PDO::ATTR_EMULATE_PREPARES => false));
+} catch (PDOException $e) {
+      exit('データベース接続失敗。'.$e->getMessage());
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang = "ja">
     <head>
@@ -26,19 +37,4 @@
             <input type="submit" value="送信" />
         </form>
     </body>
-</html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-</head>
-<body>
-<?php
-try {
-$pdo = new PDO('mysql:host=localhost;dbname=g031o153;charset=utf8','test1','a04073486',
-array(PDO::ATTR_EMULATE_PREPARES => false));
-} catch (PDOException $e) {
-      exit('データベース接続失敗。'.$e->getMessage());
-    }
-?>
-</body>
 </html>
