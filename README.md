@@ -9,13 +9,16 @@ FizzBuzzのプログラム
 結果表示
 [URL](http://153.126.145.115/g031o153/FizzBuzz.php)
 
+# 提出課題２
+2018.06.26
 
 DB接続と挿入と表示のプログラム
 
 ソースコード１
-[URL](https://github.com/takaakiyamaga/takaakiyamaga/blob/master/form.php)
+[URL(form)](https://github.com/takaakiyamaga/takaakiyamaga/blob/master/form.php)
+
 ソースコード２
-[URL](https://github.com/takaakiyamaga/takaakiyamaga/blob/master/record.php)
+[URL(record)](https://github.com/takaakiyamaga/takaakiyamaga/blob/master/record.php)
 
 結果表示
 [URL](http://153.126.145.115/g031o153/form.php)
