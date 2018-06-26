@@ -13,7 +13,8 @@ FizzBuzzのプログラム
 DB接続と挿入と表示のプログラム
 
 ソースコード
-[URL]
+[URL]https://github.com/takaakiyamaga/takaakiyamaga/blob/master/form.php
+　　　https://github.com/takaakiyamaga/takaakiyamaga/blob/master/record.php
 
 結果表示
-[URL]
+[URL]http://153.126.145.115/g031o153/form.php
