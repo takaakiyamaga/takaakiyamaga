@@ -1,7 +1,7 @@
 
 <?php
 try {
-$pdo = new PDO('mysql:host=localhost;dbname=g031o153;charset=utf8','test1','a04073486',
+$pdo = new PDO('mysql:host=localhost;dbname=g031o153;charset=utf8','g031o153','a04073486',
 array(PDO::ATTR_EMULATE_PREPARES => false));
 } catch (PDOException $e) {
       exit('データベース接続失敗。'.$e->getMessage());
