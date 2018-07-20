@@ -1,26 +1,27 @@
 <?php
 try {
-$pdo = new PDO('mysql:host=localhost;dbname=g031o153;charset=utf8','g031o153','a04073486',
-array(PDO::ATTR_EMULATE_PREPARES => false));
-$username=$_POST["username"];
-$password=$_POST["password"];
+  $pdo = new PDO('mysql:host=localhost;dbname=g031o153;charset=utf8','g031o153','a04073486',
+  array(PDO::ATTR_EMULATE_PREPARES => false));
 
-$stmt = $pdo -> prepare("INSERT INTO user (id, category, Question2, detail, answer2, answer3)
- VALUES (:id,:category,:Question2,:detail,:answer2,:answer3)");
+  $username=$_POST["username"];
+  $password=$_POST["password"];
 
-$stmt->bindParam(':username', $id, PDO::PARAM_INT);
-$stmt->bindParam(':password', $category, PDO::PARAM_STR);
-$stmt->execute();
+  $stmt = $pdo -> prepare("INSERT INTO users(username,password)
+  VALUES (:username,:password)");
 
-$statement = $pdo -> query("SELECT * FROM login");
+  $stmt->bindParam(':username', $username, PDO::PARAM_INT);
+  $stmt->bindParam(':password', $password, PDO::PARAM_STR);
+  $stmt->execute();
 
-$row_count = $statement->rowCount();
+  $statement = $pdo -> query("SELECT * FROM login");
 
-foreach ($statement as $row) {
-  $rows[] = $row;
+  $row_count = $statement->rowCount();
+
+  foreach ($statement as $row) {
+    $rows[] = $row;
+  }
+} catch (PDOException $e) {
+  exit('データベース接続失敗。'.$e->getMessage());
 }
-  } catch (PDOException $e) {
-    exit('データベース接続失敗。'.$e->getMessage());
- }
 
 ?>
